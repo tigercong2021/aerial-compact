@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aerial 定制桌面</string>
+    <string name="compact_return_name">Compact Home return</string>
+    <string name="compact_return_description">Returns to the compact Home when the original desktop appears or Home is pressed. Opening the original desktop from its tile allows it to stay until the next Home press. Reads only the foreground app package, not screen content.</string>
+</resources>

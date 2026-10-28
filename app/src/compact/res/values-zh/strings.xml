@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aerial 定制桌面</string>
+    <string name="compact_return_name">小图标桌面返回服务</string>
+    <string name="compact_return_description">原桌面出现或按 HOME 时返回小图标桌面。主动点击原桌面图标后可停留，直到再次按 HOME。仅识别当前应用包名，不读取屏幕内容。</string>
+</resources>

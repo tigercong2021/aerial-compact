@@ -1,0 +1,23 @@
+# Build outputs and machine-specific files
+.gradle/
+.kotlin/
+**/build/
+local/
+local.properties
+.idea/
+*.iml
+.DS_Store
+*.apk
+*.aab
+*.jks
+*.keystore
+*.p12
+*.pfx
+signing.properties
+.env
+.env.*
+# Household/device records and locally licensed optional media
+records/
+outputs/
+app/src/compact/assets/official-icons/
+app/src/compact/assets/preview-posters/

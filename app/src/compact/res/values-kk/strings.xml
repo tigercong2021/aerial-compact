@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aerial 定制桌面</string>
+    <string name="compact_return_name">Шағын басты экранға оралу</string>
+    <string name="compact_return_description">Бастапқы жұмыс үстелі ашылғанда немесе Home басылғанда шағын басты экранға қайтарады. Бастапқы үстел өз белгішесі арқылы ашылса, келесі Home басылғанша ашық қалады. Тек қолданба пакетінің атауын оқиды, экран мазмұнын оқымайды.</string>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Standard HOME, an opt-in return service and AerialDream. Selecting the system dream is
+         external to this app. Optional WSS is limited in code to three settings; no boot/revival
+         receiver, self-grant or ADB maintenance is added. -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" tools:node="remove" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" tools:node="remove" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:node="remove" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" tools:node="remove" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" tools:node="remove" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" tools:node="remove" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" tools:node="remove" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" tools:node="remove" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" tools:node="remove" />
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" tools:node="remove" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" tools:node="remove" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:node="remove" />
+
+    <application>
+        <activity android:name="app.orchard.tv.MainActivity"
+            android:directBootAware="false"
+            android:excludeFromRecents="false"
+            tools:replace="android:directBootAware,android:excludeFromRecents">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <service android:name="app.orchard.tv.guard.CompactHomeReturnService"
+            android:label="@string/compact_return_name"
+            android:exported="true"
+            android:directBootAware="false"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data android:name="android.accessibilityservice"
+                android:resource="@xml/compact_home_return" />
+        </service>
+        <receiver android:name="app.orchard.tv.guard.BootReceiver" tools:node="remove" />
+        <receiver android:name="app.orchard.tv.guard.ConfigReceiver" tools:node="remove" />
+        <service android:name="app.orchard.tv.guard.HomeGuardService" tools:node="remove" />
+        <service android:name="app.orchard.tv.guard.RevivalListener" tools:node="remove" />
+        <service android:name="app.orchard.tv.guard.RevivalSyncService" tools:node="remove" />
+        <service android:name="app.orchard.tv.guard.RevivalAccountService" tools:node="remove" />
+    </application>
+</manifest>

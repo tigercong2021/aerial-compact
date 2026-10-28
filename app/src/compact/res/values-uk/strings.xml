@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aerial 定制桌面</string>
+    <string name="compact_return_name">Повернення на компактний екран</string>
+    <string name="compact_return_description">Повертає на компактний екран, коли з’являється початковий робочий стіл або натиснуто Home. Відкритий через його значок початковий стіл залишається до наступного натискання Home. Читає лише назву пакета застосунку, без вмісту екрана.</string>
+</resources>
